@@ -1,0 +1,136 @@
+:root{
+  --gap:16px;
+  --blue:#d7e9ff;
+  --green:#eaf3e6;
+  --peach:#fdeee6;
+  --border:#111;
+  --maxw:820px;
+  --leftw:140px;
+  --rightw:140px;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:system-ui,-apple-system,'Segoe UI',Roboto}
+
+.page{
+  min-height:100%;
+  display:flex;
+  flex-direction:column;
+  background:white;
+  padding:0;
+}
+
+.block{ position:relative; }
+
+
+.block-1{
+  background:var(--blue);
+  height:140px;
+  padding:18px;
+  display:flex;
+  align-items:flex-start;
+  justify-content:flex-end;
+  box-sizing:border-box;
+}
+
+
+.middle {
+  display: flex;
+  flex: 1;
+}
+
+
+.block-2 {
+  background: var(--green);
+  width: var(--leftw);
+  padding: 18px;
+  flex: 0 0 var(--leftw);
+  display: flex;
+  flex-direction: column;
+}
+
+
+.center-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.center-top {
+  flex: 1;
+  display: flex;
+}
+
+
+.block-3{
+  background:white;
+  flex:1 1 auto;
+  padding:28px;
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.04);
+  min-height:320px;
+}
+
+
+.right-col {
+  display: flex;
+  flex-direction: column;
+  width: var(--rightw);
+  flex: 0 0 var(--rightw);
+}
+
+
+.block-4 {
+  background: var(--green);
+  padding: 16px;
+  flex: 1;
+}
+
+
+.block-5 {
+  background: var(--peach);
+  padding: 16px;
+  flex: 1;
+}
+
+
+.block-6{
+  background:var(--blue);
+  min-height:110px;
+  padding:16px;
+  display:flex;
+  align-items:center;
+  justify-content:flex-start;
+}
+
+
+.badge{
+  position:absolute;
+  border:2px solid #222;
+  background:white;
+  padding:6px 10px;
+  font-weight:700;
+}
+.block-1 .badge-x{ left:24px; top:18px; }
+.block-6 .badge-y{ left: 2%; top:2%;}
+
+
+@media (max-width:719px){
+  .middle{ flex-direction:column; }
+  .right-col, .block-2, .block-3{ width:100%; flex:0 0 auto; }
+  .block-6{ margin-top:12px; }
+  .block-1{ height:auto; padding:12px; }
+  .block-6 .badge-y{ left:18px; top:12px; }
+  .num{ position:static; margin-left:auto; }
+}
+
+
+.sr-only{
+  position:absolute;
+  width:1px;height:1px;
+  padding:0;margin:-1px;
+  overflow:hidden;
+  clip:rect(0,0,0,0);
+  white-space:nowrap;
+  border:0
+}
